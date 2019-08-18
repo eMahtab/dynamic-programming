@@ -9,8 +9,9 @@ public class Fibonacci {
 	public static Map<Integer, Integer> cache = new HashMap<Integer, Integer>();
 
 	public static void main(String[] args) {
+		// Fibonacci Series : 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, ..
 		long start = System.currentTimeMillis();
-		int nthFibonacci = nthFibonacci(35);
+		int nthFibonacci = nthFibonacci(26);
 		long end = System.currentTimeMillis();
 		System.out.println("Fibonacci Number  " + nthFibonacci);
 		System.out.println("Time taken "+ (end-start) + " Milliseconds");
@@ -24,10 +25,8 @@ public class Fibonacci {
 					int n2Fibonacci = cache.get(i - 2);
 					cache.put(i, n1Fibonacci + n2Fibonacci);
 			}
-			return cache.get(n);
-			
+			return cache.get(n);	
 		}
-
 }
 
 

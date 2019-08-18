@@ -9,8 +9,9 @@ public class Fibonacci {
 	public static Map<Integer, Integer> cache = new HashMap<Integer, Integer>();
 
 	public static void main(String[] args) {
+		// Fibonacci Series : 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, ..
 		long start = System.currentTimeMillis();
-		int nthFibonacci = nthFibonacci(35);
+		int nthFibonacci = nthFibonacci(26);
 		long end = System.currentTimeMillis();
 		System.out.println("Fibonacci Number  " + nthFibonacci);
 		System.out.println("Total Calls "+calls);
@@ -18,6 +19,7 @@ public class Fibonacci {
 	}
 
 	public static int nthFibonacci(int n) {
+		System.out.println("fib("+n+")");
 		calls++;
 		if (cache.containsKey(n)) {
 			return cache.get(n);
@@ -34,7 +36,5 @@ public class Fibonacci {
 				return nthFibonacci;
 			}
 		}
-
 	}
-
 }
